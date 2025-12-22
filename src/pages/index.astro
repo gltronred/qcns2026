@@ -1,11 +1,94 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Image } from 'astro:assets';
+import checkmark from '../assets/checkmark.png';
+import clock from '../assets/clock.png';
+
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="QCNS 2026">
+  <div
+    class="hero bg-base-200 min-h-96"
+    {/* style={`background-image: url(${bgz.src})`} */}
+    >
+    <div class="hero-overlay bg-opacity-60"></div>
+    <div class="hero-content text-center text-neutral-content">
+      <div class="max-w-3xl">
+        <h1 class="text-5xl font-bold">
+        Quantum Computing and Networking for Smart Systems
+        <small>Co-located with IEEE SMARTCOMP 2026</small>
+        </h1>
+        <p class="py-6">
+
+        </p>
+        <a href="/venue" class="btn btn-primary">Workshop Venue</a>
+{/*
+        <a href="/speakers" class="btn btn-outline btn-primary">Invited Speakers</a>
+        <a href="/committees" class="btn btn-neutral">Program Committee</a>
+*/}
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 gap-8">
+    <div class="card bg-base-100 my-2 w-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Potential Topics</h2>
+        <div class="prose">
+        <ul>
+          <li>Hybrid classical–quantum applications for smart systems</li>
+          <li>Quantum machine learning for sensor data and IoT analytics</li>
+          <li>Quantum optimization for transportation, mobility, logistics, energy, and resource allocation</li>
+          <li>Quantum key distribution and quantum-safe security for smart infrastructures</li>
+          <li>Protocols and architectures for quantum networks and distributed quantum computing</li>
+          <li>Integration of quantum devices with edge/fog/cloud architectures</li>
+          <li>Tools, simulators, and testbeds for quantum-enhanced smart systems</li>
+          <li>Implementations, prototypes, and real-world demonstrations</li>
+          <li>Frameworks for evaluating the impact and feasibility of quantum applications</li>
+        </ul>
+        </div>
+        <div class="card-actions justify-center">
+          <a href="/cfp" class="btn btn-outline btn-primary">Call for Papers</a>
+          <a href="/submission" class="btn btn-primary">Submit Paper</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card bg-base-100 my-2 w-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Important Dates</h2>
+        <ul class="timeline timeline-vertical max-w-60">
+          <li>
+            <div class="timeline-start">20 March</div>
+            <div class="timeline-middle"><Image src={clock} alt="checkmark" /></div>
+            <div class="timeline-end timeline-box min-w-48">Paper submission deadline</div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+	    <div class="timeline-start">3 April</div>
+            <div class="timeline-middle"><Image src={clock} alt="clock" /></div>
+            <div class="timeline-end timeline-box min-w-48">Notification to authors</div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+	    <div class="timeline-start">22 April</div>
+            <div class="timeline-middle"><Image src={clock} alt="clock" /></div>
+            <div class="timeline-end timeline-box min-w-48">Camera-ready deadline</div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+	    <div class="timeline-start">22 June</div>
+            <div class="timeline-middle"><Image src={clock} alt="clock" /></div>
+            <div class="timeline-end timeline-box min-w-48">Workshop</div>
+          </li>
+        </ul>
+        <div class="card-actions justify-end">
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>

@@ -1,14 +1,26 @@
-# Astro Starter Kit: Basics
+# QCNS 2026 website
+
+Compilation:
 
 ```sh
-pnpm create astro@latest -- --template basics
+pnpm install
+pnpm build
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## TODO
+
+- use a JSON file to populate important dates on the index, "CFP", and "Important dates" pages
+- use a JSON file for schedule
+- confirm important dates
+- provide link to EDAS on the CFP and submission pages
+- add information about conference venue
+- add contact information (at least, email)
+- add TPC members
+- if there are invited speakers, add their information to the speakers page from a JSON
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside of the project, you'll see the following folders and files:
 
 ```text
 /
@@ -25,6 +37,8 @@ Inside of your Astro project, you'll see the following folders and files:
 │       └── index.astro
 └── package.json
 ```
+
+The most important files are `src/components/NavBar.astro`, which contains the navigation bar, and `src/pages/`, where all the pages are located.
 
 To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 

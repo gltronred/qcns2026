@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { Image } from 'astro:assets';
+import professor from '../assets/professor.png';
+import einstein from '../assets/einstein.png';
+---
+<Layout title="Invited Speakers">
+
+<div class="prose m-2">
+<h1 class="text-3xl">Invited Speakers</h1>
+</div>
+
+<div class="grid grid-flow-row grid-cols-3 gap-8">
+  <div class="card card-side bg-base-100 shadow-xl">
+    <figure>
+      <div class="avatar">
+        <div class="w-96 rounded">
+          <Image src={einstein} alt="demo einstein" />
+        </div>
+      </div>
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">Prof. John Doe</h2>
+      <p>Prof. John Doe is a renowned scientist in the field of quantum lorem ipsum. His talk will cover the topic of dolores amet.</p>
+    </div>
+  </div>
+
+  <div class="card card-side bg-base-100 shadow-xl">
+    <figure>
+      <div class="avatar">
+        <div class="w-96 rounded">
+          <Image src={professor} alt="demo prof" />
+        </div>
+      </div>
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">Dr. H. Random</h2>
+      <p>Dr. H. Random will give a talk on something something something</p>
+    </div>
+  </div>
+</div>
+
+</Layout>

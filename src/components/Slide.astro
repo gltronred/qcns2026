@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  prev: number;
+  next: number;
+  cur: number;
+  src: string;
+  alt?: string;
+  text: string;
+}
+
+const { prev, next, cur, src, alt, text } = Astro.props;
+
+const prevName = "#slide" + prev
+const nextName = "#slide" + next
+const curName = "#slide" + cur
+
+---
+<div id={curName} class="carousel-item relative">
+  <Image
+    src={src}
+    alt={alt}
+    class="w-full" />
+  <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+    <a href={prevName} class="btn btn-circle">❮</a>
+    <a href={nextName} class="btn btn-circle">❯</a>
+  </div>
+</div>

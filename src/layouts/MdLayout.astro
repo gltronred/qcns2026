@@ -1,0 +1,10 @@
+---
+import Layout from './Layout.astro';
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+<article class="prose prose-lg max-w-full pb-10">
+  <slot/>
+</article>
+</Layout>

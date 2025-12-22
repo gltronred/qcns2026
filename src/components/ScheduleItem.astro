@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import clock from '../assets/clock.png';
+
+interface Props {
+  start: string;
+  end?: string;
+  name: string;
+  title?: string;
+  first: boolean;
+  last: boolean;
+}
+
+const {start, end, name, title, first, last} = Astro.props;
+
+const endTime = end ? " — " + end : "";
+
+---
+
+<li>
+  {!first && <hr class="bg-primary"/>}
+  <div class="timeline-start max-w-40"><time class="font-mono italic">{start}{endTime}</time></div>
+  <div class="timeline-middle"><Image src={clock} alt="clock" /></div>
+  <div class="timeline-end min-w-48">
+  <div class="text-lg font-black">{name}</div>
+  {title}
+  </div>
+  {!last && <hr class="bg-primary"/>}
+</li>
