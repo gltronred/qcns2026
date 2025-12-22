@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  //site: 'https://qccc2025.github.io',
+  site: 'https://gltronred.github.io',
   base: '/qcns2026',
   integrations: [tailwind()]
 });
