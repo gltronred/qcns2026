@@ -7,6 +7,8 @@ pnpm install
 pnpm build
 ```
 
+The resulting static files will be located in the `dist/` directory.
+
 ## TODO
 
 - use a JSON file to populate important dates on the index, "CFP", and "Important dates" pages
@@ -14,6 +16,7 @@ pnpm build
 - confirm important dates
 - provide link to EDAS on the CFP and submission pages
 - add information about conference venue
+- add beautiful picture to the index page
 - add contact information (at least, email)
 - add TPC members
 - if there are invited speakers, add their information to the speakers page from a JSON
