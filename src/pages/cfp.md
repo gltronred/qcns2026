@@ -30,4 +30,4 @@ Papers must follow the IEEE conference format, with a maximum length of 6 pages.
 - Camera-ready deadline: 22 April 2026
 - Workshop date: 22 June 2026
 
-<a href="submission" class="btn btn-primary">Submit Paper</a>
+<a href="./submission" class="btn btn-primary">Submit Paper</a>
