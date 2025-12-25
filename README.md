@@ -9,17 +9,23 @@ pnpm build
 
 The resulting static files will be located in the `dist/` directory.
 
-## TODO
+## TODO (technical)
 
 - use a JSON file to populate important dates on the index, "CFP", and "Important dates" pages
 - use a JSON file for schedule
-- confirm important dates
-- provide link to EDAS on the CFP and submission pages
+- if there are invited speakers, add their information to the speakers page from a JSON
+
+## TODO (content)
+
 - add information about conference venue
 - add beautiful picture to the index page
+
+## TODO (organisational)
+
+- confirm important dates
 - add contact information (at least, email)
+- provide link to EDAS on the CFP and submission pages
 - add TPC members
-- if there are invited speakers, add their information to the speakers page from a JSON
 
 ## 🚀 Project Structure
 
