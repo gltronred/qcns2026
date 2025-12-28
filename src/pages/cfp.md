@@ -7,7 +7,7 @@ title: Call for Papers
 
 Quantum technologies are rapidly emerging as enablers of next-generation smart systems. From optimization and machine learning to secure communications and distributed computing, quantum computing and quantum networking offer unprecedented opportunities—but also raise significant research challenges. QCNS 2026 aims to bring together researchers from smart computing, IoT, CPS, networking, quantum computing, and quantum communications to explore these opportunities.
 
-## Topics of interest include (but are not limited to)
+## Topics of interest
 
 - Hybrid classical–quantum applications for smart systems
 - Quantum machine learning for sensor data and IoT analytics
@@ -21,13 +21,19 @@ Quantum technologies are rapidly emerging as enablers of next-generation smart s
 
 ## Submission Guidelines
 
-Papers must follow the IEEE conference format, with a maximum length of 6 pages. Submission will be handled via EDAS (link TBA). All accepted papers will be included in the SMARTCOMP 2026 Workshop Proceedings and published in IEEE Xplore. Simultaneous submissions to other workshops/conferences are NOT allowed.
+Papers must follow the IEEE conference format, with a maximum length of **6 pages**.
+
+Submission will be handled via EDAS (link TBA).
+
+_All accepted papers will be included in the SMARTCOMP 2026 Workshop Proceedings and published in IEEE Xplore._
+
+Simultaneous submissions to other workshops/conferences are NOT allowed.
 
 ## Important dates
 
-- Paper submission deadline: 20 March 2026 [tbc]
+- **Paper submission deadline: 20 March 2026** [tbc]
 - Notification to authors: 3 April 2026 [tbc]
 - Camera-ready deadline: 22 April 2026
 - Workshop date: 22 June 2026
 
-<a href="./submission" class="btn btn-primary">Submit Paper</a>
+<!--<a href="./submission" class="btn btn-primary">Submit Paper</a>-->

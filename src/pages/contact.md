@@ -5,5 +5,5 @@ title: Contact Us
 
 # Contact Us
 
-**Email:** TBA
+For information about the workshop you may contact the [organisers](./committees).
 
