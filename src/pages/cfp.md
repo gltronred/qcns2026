@@ -21,7 +21,7 @@ Quantum technologies are rapidly emerging as enablers of next-generation smart s
 
 ## Submission Guidelines
 
-Papers must follow the IEEE conference format, with a maximum length of 6 pages. The authors may include a clearly marked appendix, which will be read at the discretion of the reviewers. Submission will be handled via EDAS (link TBA). All accepted papers will be included in the SMARTCOMP 2026 Workshop Proceedings and published in IEEE Xplore. Simultaneous submissions to other workshops/conferences are NOT allowed.
+Papers must follow the IEEE conference format, with a maximum length of 6 pages. Submission will be handled via EDAS (link TBA). All accepted papers will be included in the SMARTCOMP 2026 Workshop Proceedings and published in IEEE Xplore. Simultaneous submissions to other workshops/conferences are NOT allowed.
 
 ## Important dates
 
