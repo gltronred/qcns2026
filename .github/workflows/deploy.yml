@@ -47,4 +47,6 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
       - name: Deploy with rsync
-        run: rsync -avz ./dist/ ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/home/qcns/qcns2026/dist/
+        run: rsync -avz -e "ssh -i $SSH_KEY_PATH" ./dist/ ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/home/qcns/qcns2026/dist/
+        env:
+          SSH_KEY_PATH: ${{ github.workspace }}/../private.key
