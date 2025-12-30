@@ -41,13 +41,12 @@ jobs:
         run: |
           mkdir -p ~/.ssh/
           echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
-          cat ~/.ssh/known_hosts
           echo "$SSH_PRIVATE_KEY" > ../private.key
           sudo chmod 600 ../private.key
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
       - name: Deploy with rsync
-        run: rsync -avz -e "ssh -i $SSH_KEY_PATH" ./dist/ ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/home/qcns/qcns2026/dist/
+        run: rsync -avz -e "ssh -i $SSH_KEY_PATH -o StrictHostKeyChecking=off" ./dist/ ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/home/qcns/qcns2026/dist/
         env:
           SSH_KEY_PATH: ${{ github.workspace }}/../private.key
