@@ -27,7 +27,7 @@ jobs:
           # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
           # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
 
-  deploy:
+  pages:
     needs: build
     runs-on: ubuntu-latest
     environment:
@@ -37,6 +37,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Create SSH key
         run: |
           mkdir -p ~/.ssh/
@@ -46,7 +50,7 @@ jobs:
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-      - name: Deploy with rsync
-        run: rsync -avz -e "ssh -i $SSH_KEY_PATH -o StrictHostKeyChecking=off" ./dist/ ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/home/qcns/qcns2026/dist/
+      - name: Run deployment on server
+        run: ssh -i $SSH_KEY_PATH -o StrictHostKeyChecking=off ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}} build.sh
         env:
           SSH_KEY_PATH: ${{ github.workspace }}/../private.key
