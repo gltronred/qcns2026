@@ -51,6 +51,6 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
       - name: Run deployment on server
-        run: ssh -i $SSH_KEY_PATH -o StrictHostKeyChecking=off ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}} build.sh
+        run: ssh -i $SSH_KEY_PATH -o StrictHostKeyChecking=off ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}} /home/${{secrets.SSH_USER}}/build.sh
         env:
           SSH_KEY_PATH: ${{ github.workspace }}/../private.key
