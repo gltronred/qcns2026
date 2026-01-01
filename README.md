@@ -1,5 +1,7 @@
 # QCNS 2026 website
 
+[![Deploy to GH Pages and Server](https://github.com/gltronred/qcns2026/actions/workflows/deploy.yml/badge.svg)](https://github.com/gltronred/qcns2026/actions/workflows/deploy.yml)
+
 Compilation:
 
 ```sh
