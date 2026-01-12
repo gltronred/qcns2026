@@ -5,5 +5,5 @@ title: Contact Us
 
 # Contact Us
 
-For information about the workshop you may contact the [organisers](./committees).
+For information about the workshop you may contact the [organisers](mailto:qcns2026-chairs@edas.info).
 

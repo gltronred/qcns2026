@@ -11,4 +11,4 @@ All accepted papers will be included in the SMARTCOMP 2026 Workshop Proceedings 
 
 Simultaneous submissions to other workshops/conferences are NOT allowed.
 
-**Submissions are not open yet.**
+Submit your paper to [EDAS](https://edas.info/N34466).

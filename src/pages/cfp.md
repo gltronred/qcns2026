@@ -23,7 +23,7 @@ Quantum technologies are rapidly emerging as enablers of next-generation smart s
 
 Papers must follow the IEEE conference format, with a maximum length of **6 pages**.
 
-Submission will be handled via EDAS (link TBA).
+Submission will be handled via Submit your paper to [EDAS](https://edas.info/N34466).
 
 _All accepted papers will be included in the SMARTCOMP 2026 Workshop Proceedings and published in IEEE Xplore._
 
@@ -31,9 +31,9 @@ Simultaneous submissions to other workshops/conferences are NOT allowed.
 
 ## Important dates
 
-- **Paper submission deadline: 20 March 2026** [tbc]
-- Notification to authors: 3 April 2026 [tbc]
-- Camera-ready deadline: 22 April 2026
+- **Paper submission deadline: 9 March 2026**
+- Notification to authors: 22 April 2026
+- Camera-ready deadline: [TBC]
 - Workshop date: 22 June 2026
 
 <!--<a href="./submission" class="btn btn-primary">Submit Paper</a>-->
