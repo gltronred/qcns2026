@@ -31,7 +31,7 @@ Simultaneous submissions to other workshops/conferences are NOT allowed.
 
 ## Important dates
 
-- **Paper submission deadline: 9 March 2026**
+- **Paper submission deadline: 23 March 2026** [extended, firm]
 - Notification to authors: 22 April 2026
 - Camera-ready deadline: [TBC]
 - Workshop date: 22 June 2026
