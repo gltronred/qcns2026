@@ -8,120 +8,22 @@ import ScheduleItem from '../components/ScheduleItem.astro';
 
 <h1 class="text-4xl pb-2">Schedule</h1>
 
-<h2 class="text-3xl pb-2">Friday, June 27</h2>
-<div class="items-left">
-<ul class="timeline timeline-vertical">
-	<ScheduleItem first=true  last=false start="09:00" name="Registration" />
-	<ScheduleItem first=false last=false start="09:40" end="10:00" name="Conference Opening"/>
-	<ScheduleItem first=false last=false start="10:00" end="10:20" 
-							   name="Kamil Khadiev, Vladislav Remidovskii (Yandex, Moscow), Timur Bikmullin (Sber, Kazan), Aliya Khadieva"
-							   title="Quantum Algorithm for Searching for the Longest Segment and the Largest Empty Rectangle"/>
-	<ScheduleItem first=false last=false start="10:20" end="10:40" 
-							   name="Alexander Rumyantsev, Mariia Makarova, Alexander Khomich, Enrico Blanzieri (Петрозаводск)"
-							   title="Empirical Evaluation of SVM for Binary Classification in QUBO Form Using VQE and QA"/>
-	<ScheduleItem first=false last=false start="10:40" end="11:00" 
-							   name="Aliya Khadieva"
-							   title="Quantum Hashing Algorithm and Quantum Fourier Transform Implementation on Real Devices"/>
-	<ScheduleItem first=false last=false start="11:00" end="11:30" name="Coffee Break"/>
-	<ScheduleItem first=false last=false start="11:30" end="12:30" 
-							   name="Kosovskaya Tatiana,  Zhou Juan (СПбГУ)"
-							   title="Algorithms for extraction of  maximal common properties of complex structured objects"/>
-	<ScheduleItem first=false last=false start="12:30" end="14:00" name="Lunch"/>
-	<ScheduleItem first=false last=false start="14:00" end="14:20" 
-							   name="Ilnar Zinnatullin, Kamil Khadiev"
-							   title="Efficient Algorithms for Quantum Hashing"/>
-	<ScheduleItem first=false last=false start="14:20" end="14:40" 
-							   name="Aida Gainutdinova"
-							   title="Quantum and Classical nondeterministic OBDDs"/>
-	<ScheduleItem first=false last=false start="14:40" end="15:00" 
-							   name="Alexander Vasiliev, Dmitry Akat'ev, Nail Shafeev, Farid Ablayev, Alexey Kalachev"
-							   title="Quantum Hashing: Theory and Implementation"/>
-	<ScheduleItem first=false last=true  start="15:00" end="16:00" 
-							   name="Invited: Renato Portugal(Brazil) "
-							   title="Single-Qudit Quantum Neural Networks"/>
-</ul>
-</div>
-
 <h2 class="text-3xl pb-2">Saturday, June 28</h2>
 <div class="items-left">
 <ul class="timeline timeline-vertical">
-	<ScheduleItem first=true  last=false start="10:00" end="11:00" 
+	<ScheduleItem first={true}  last={false} start="10:00" end="11:00" prev next
 							   name="Николаев М.С."
 							   title="Жадная гипотеза в задаче о кратчайшей общей надстроке и ее обобщения"/>
-	<ScheduleItem first=false last=false start="11:00" end="11:20" name="Coffee Break"/>
-	<ScheduleItem first=false last=false start="11:20" end="12:20" 
+	<ScheduleItem first={false} last={false} start="11:00" end="11:20" prev next name="Coffee Break"/>
+	<ScheduleItem first={false} last={false} start="11:20" end="12:20" prev 
 							   name="Кулагин А.В., Ожигов Ю.И."
 							   title="Темные состояния и квантовые эффекты в контексте исследования конечномерных моделей"/>
-	<ScheduleItem first=false last=false start="12:20" end="12:40" 
+	<ScheduleItem first={false} last={false} start="12:20" end="12:40" 
 							   name="Салихова Н.М., Аблаев Ф.М."
 							   title="Квантовые алгоритмы поиска подстроки в строке на основе хеширования"/>
-	<ScheduleItem first=false last=true  start="12:40" end="13:40" 
+	<ScheduleItem first={false} last={true}  start="12:40" end="13:40" 
 							   name="Аблаев Ф.М."
 							   title="Квантовое хеширование: передача информации, алгоритмы"/>
-</ul>
-</div>
-
-<h2 class="text-3xl pb-2">Sunday, June 29</h2>
-<div class="items-left">
-<ul class="timeline timeline-vertical">
-	<ScheduleItem first=false last=false start="10:00" end="10:20" 
-							   name="Шаймарданов И.А."
-							   title="Криптоустойчивость функции плотного квантового хеширования"/>
-	<ScheduleItem first=false last=false start="10:20" end="10:40" 
-							   name="Степаненко К.А."
-							   title="Квантовое хеширование в конечных абелевых группах в контексте разностных множеств"/>
-	<ScheduleItem first=false last=false start="10:40" end="11:00" 
-							   name="Валеев И.М."
-							   title="Оптимизация сокращенной схемы квантового хеширования для квантового компьютера с графом связности кубитов в виде дерева"/>
-	<ScheduleItem first=false last=false start="11:00" end="11:20" 
-							   name="Алтынбаев К.Р."
-							   title="Реализация сокращенной квантовой схемы для алгоритма квантового хеширования для шумных симуляторов квантовых компьютеров"/>
-	<ScheduleItem first=false last=false start="11:20" end="11:40" 
-							   name="Судаков Д.А."
-							   title="Оптимизация запросов в древовидных структурах на основе модифицированной центроидной декомпозиции"/>
-	<ScheduleItem first=false last=false start="11:40" end="12:00" 
-							   name="Фазылов Р.Р."
-							   title="Квантовый алгоритм для задачи о покрытии множества"/>
-	<ScheduleItem first=false last=false start="12:00" end="12:20" 
-							   name="Иванов Е.Р."
-							   title="Онлайн алгоритм с ограниченными вычислительными ресурсами для задаче о рюкзаке"/>
-	<ScheduleItem first=false last=false start="12:20" end="12:40" 
-							   name="Сафина Л.И."
-							   title="Квантовый алгоритм прогнозирования моделью случайный лес"/>
-</ul>
-</div>
-
-<h2 class="text-3xl pb-2">Monday, June 30</h2>
-<div class="items-left">
-<ul class="timeline timeline-vertical">
-	<ScheduleItem first=false last=false start="10:00" end="10:20" 
-							   name="Liliya E. Khairullina, Sergey V. Makletsov, Guzel Z. Khabibullina, Veronika V. Bronskaya, Zulfat N. Khakimov"
-							   title="Comparative analysis of models based on the Monte Carlo method and transformer neural network for forecasting financial time series"/>
-	<ScheduleItem first=false last=false start="10:20" end="10:40" 
-							   name="Романов К.А., Плещинский Н.Б."
-							   title="Восстановление параметров неоднородности в волноводе: нейросетевым и численным методами"/>
-	<ScheduleItem first=false last=false start="10:40" end="11:00" 
-							   name="Конюхов И.В., Конюхов В.М., Курдюков А.В. "
-							   title="Применение сетей Колмогорова-Арнольда для физически-информированного нейросетевого моделирования"/>
-	<ScheduleItem first=false last=false start="11:00" end="11:20" name="Coffee Break"/>
-	<ScheduleItem first=false last=false start="11:20" end="11:40" 
-							   name="Колчев А.А., Егошин И.А., Пасынков Д.В., Денисов Р.В."
-							   title="Определение степени кальцинированности сосуда по маммографическим изображениям на основе машинного обучения"/>
-	<ScheduleItem first=false last=false start="11:40" end="12:00" 
-							   name="Хежжо М."
-							   title="Улучшенная диагностика рака молочной железы с гибридной моделью машинного обучения"/>
-	<ScheduleItem first=false last=false start="12:00" end="12:20" 
-							   name="Низамутдинов И.А., Гиниятова Д.Х."
-							   title="Особенности задач детекции аномалий на примере обнаружения мошеннических транзакций и их решение методами машинного обучения"/>
-	<ScheduleItem first=false last=false start="12:20" end="12:40" 
-							   name="Саттарова А.Р., Саттаров Р.З., Тумаков Д.Н."
-							   title="Применение сетей типа U-Net для построения геологических карт"/>
-	<ScheduleItem first=false last=false start="12:40" end="12:40" 
-							   name="Макаров А.В., Тумаков М.Д., Маркина А.Г."
-							   title="Регрессионные модели характеристик основного лепестка отраженного поля в задачи рассеяния электромагнитной волны на фрактальных углублениях металлической поверхности"/>
-	<ScheduleItem first=false last=false start="13:00" end="13:20" 
-							   name="Gurjeet Singh, Abhik Banerjee, S Balakrishnan (India)"
-							   title="Quantization Scheme For Mixed Strategies"/>
 </ul>
 </div>
 
