@@ -13,9 +13,11 @@ interface Props {
   last: boolean;
   past: boolean;
   next: boolean;
+  icon?: string;
+  alticon?: string;
 }
 
-const {start, end, name, title, first, last, prev, next} = Astro.props;
+const {start, end, name, title, first, last, prev, next, icon, alticon} = Astro.props;
 
 const endTime = end ? " — " + end : ""
 const past = prev && next
@@ -25,13 +27,14 @@ const future = !prev && !next
 
 <li>
   {!first && (prev ? <hr class="bg-primary"/> : <hr/>) }
-  <div class="timeline-start max-w-40"><time class="font-mono italic">{start}{endTime}</time></div>
-  <div class="timeline-middle">
-    {past ? <Image src={checkmark} alt="checkmark" /> :
-    (!future ? <Image src={now}   width="24" alt="happening now" /> :
-               <Image src={clock} alt="clock" />)}
+  <div class="timeline-start max-w-40 pr-2"><time class="font-mono italic">{start}{endTime}</time></div>
+  <div class="timeline-middle px-1">
+    {icon ?    <Image width="32" src={icon} alt={alticon} /> :
+    (past ?    <Image width="32" src={checkmark} alt="checkmark" /> :
+    (!future ? <Image width="32" src={now}   alt="happening now" /> :
+               <Image width="32" src={clock} alt="clock" />))}
   </div>
-  <div class="timeline-end min-w-48">
+  <div class="timeline-end min-w-48 pl-2">
   <div class="text-lg font-black">{name}</div>
   {title}
   </div>
