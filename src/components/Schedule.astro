@@ -1,0 +1,17 @@
+---
+import ScheduleItem from './ScheduleItem.astro'
+
+const { config } = Astro.props
+const n = config.schedule.length
+
+---
+
+<ul class="timeline timeline-vertical">
+    {config.schedule.map((item,i) => (
+      <ScheduleItem
+        first={i==0} last={i==n-1}
+        prev={item.start < config.now} next={config.now >= item.end}
+        start={item.start} end={item.end}
+        name={item.name} title={item.title} />
+    ))}
+</ul>
