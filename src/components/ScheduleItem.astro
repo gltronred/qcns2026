@@ -3,12 +3,14 @@ import { Image } from 'astro:assets';
 import clock from '../assets/clock.png';
 import now from '../assets/icons8-time.gif';
 import checkmark from '../assets/checkmark.png';
+import none from '../assets/none.png';
 
 interface Props {
-  start: string;
+  start?: string;
   end?: string;
   name: string;
   title?: string;
+  split?: boolean;
   first: boolean;
   last: boolean;
   past: boolean;
@@ -17,9 +19,9 @@ interface Props {
   alticon?: string;
 }
 
-const {start, end, name, title, first, last, prev, next, icon, alticon} = Astro.props;
+const {start, end, name, title, split, first, last, prev, next, icon, alticon} = Astro.props;
 
-const endTime = end ? " — " + end : ""
+const fulltime = (start ? start : "") + " " + (end ? " — " + end : "")
 const past = prev && next
 const future = !prev && !next
 
@@ -27,15 +29,16 @@ const future = !prev && !next
 
 <li>
   {!first && (prev ? <hr class="bg-primary"/> : <hr/>) }
-  <div class="timeline-start max-w-40 pr-2"><time class="font-mono italic">{start}{endTime}</time></div>
+  <div class="timeline-start max-w-40 pr-2"><time class="font-mono italic">{fulltime}</time></div>
   <div class="timeline-middle px-1">
-    {icon ?    <Image width="32" src={icon} alt={alticon} /> :
+    {split ?   <Image width="32" src={none} alt="empty icon" /> :
+    (icon ?    <Image width="32" src={icon} alt={alticon} /> :
     (past ?    <Image width="32" src={checkmark} alt="checkmark" /> :
-    (!future ? <Image width="32" src={now}   alt="happening now" /> :
-               <Image width="32" src={clock} alt="clock" />))}
+    (!future && end ? <Image width="32" src={now}   alt="happening now" /> :
+                      <Image width="32" src={clock} alt="clock" />)))}
   </div>
   <div class="timeline-end min-w-48 pl-2">
-  <div class="text-lg font-black">{name}</div>
+  <div class:list={[{"text-lg": !split, "font-black": !split, "my-5": split, "text-2xl": split }]}>{name}</div>
   {title}
   </div>
   {!last && (next ? <hr class="bg-primary"/> : <hr/>)}

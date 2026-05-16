@@ -11,7 +11,8 @@ const n = config.schedule.length
     {config.schedule.map((item,i) => (
       <ScheduleItem
         first={i==0} last={i==n-1}
-        prev={item.start <= config.now} next={config.now >= item.end}
+        prev={item.start <= config.now} next={item.end && config.now >= item.end}
+        split={item.split}
         icon={item.icon} alticon={item.alticon}
         start={item.start} end={item.end}
         name={item.name} title={item.title} />
