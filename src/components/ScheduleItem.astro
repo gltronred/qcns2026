@@ -17,13 +17,16 @@ interface Props {
   next: boolean;
   icon?: string;
   alticon?: string;
+  more?: string;
 }
 
-const {start, end, name, title, split, first, last, prev, next, icon, alticon} = Astro.props;
+const {start, end, name, title, split, first, last, prev, next, icon, alticon, more} = Astro.props;
 
 const fulltime = (start ? start : "") + " " + (end ? " — " + end : "")
 const past = prev && next
 const future = !prev && !next
+
+const action = more + ".showModal()"
 
 ---
 
@@ -40,6 +43,7 @@ const future = !prev && !next
   <div class="timeline-end min-w-48 pl-2">
   <div class:list={[{"text-lg": !split, "font-black": !split, "my-5": split, "text-2xl": split }]}>{name}</div>
   {title}
+  {more && <button class="btn" onclick={action}>Details</button> }
   </div>
   {!last && (next ? <hr class="bg-primary"/> : <hr/>)}
 </li>
